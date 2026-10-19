@@ -1,0 +1,9 @@
+dist/
+*.exe
+*.msi
+*.zip
+*.tar.gz
+*.pyc
+.env*
+*.key
+*.pem
