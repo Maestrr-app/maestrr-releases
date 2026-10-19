@@ -90,7 +90,7 @@ Lorsqu’un média est importé et reconnu dans Jellyfin, le dashboard propose u
 | **Listenarr** | Composant optionnel pour les livres audio ; configuration propre à cette application |
 | **Dockge** | Interface de gestion des stacks Docker sur Linux |
 | **Tailscale** | Accès distant privé lorsque cette option est configurée |
-| **Gluetun / VPN** | Connexion VPN des services concernés, si vous activez cette option |
+| **Gluetun / VPN** | Connexion VPN pour Qbittorent, si vous activez cette option |
 
 Les métadonnées et illustrations utilisent les sources intégrées selon le média, notamment **TMDB**, **MusicBrainz**, **ListenBrainz**, **Apple** et **Fanart.tv**. Leur disponibilité dépend des catalogues et des accès configurés.
 
