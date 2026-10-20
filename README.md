@@ -21,19 +21,19 @@
   <a href="#questions-fréquentes">Questions fréquentes</a>
 </p>
 
-> **Projet en développement.** Aucune version officielle n’est encore disponible au téléchargement. Cette page présente le projet ; les distributions seront publiées après validation. Les visuels sont indicatifs et l’interface continue d’évoluer.
+> **Bêta publique disponible : [Maestrr 1.6.0-beta.8](https://github.com/Maestrr-app/maestrr-releases/releases/tag/v1.6.0-beta.8).** Testez-la d’abord sur une installation non critique. Les visuels de cette page sont indicatifs et l’interface continue d’évoluer.
 
 ## Téléchargements
 
-Les versions validées seront disponibles dans les **[Releases officielles](https://github.com/Maestrr-app/maestrr-releases/releases)** de ce dépôt.
+Les versions sont publiées dans les **[Releases](https://github.com/Maestrr-app/maestrr-releases/releases)** de ce dépôt.
 
 | Distribution | Usage | Disponibilité |
 | --- | --- | --- |
-| Setup Windows | Préparer une installation sur le PC ou sur un serveur Linux par SSH | À venir |
-| Mise à jour du dashboard | Actualiser une instance compatible en conservant sa configuration | À venir |
+| Setup Windows | Installer sur ce PC, sur un serveur Debian/Ubuntu par SSH ou sur un NAS TrueNAS SCALE | [Bêta 1.6.0-beta.8](https://github.com/Maestrr-app/maestrr-releases/releases/tag/v1.6.0-beta.8) |
+| Mise à jour du dashboard | Installée automatiquement par l’agent Maestrr, en conservant la configuration | [Bêta 1.6.0-beta.8](https://github.com/Maestrr-app/maestrr-releases/releases/tag/v1.6.0-beta.8) |
 | Application Android native | Projet distinct, pour une étape ultérieure | Pas encore disponible |
 
-Chaque publication précisera la version, les nouveautés, les prérequis, les instructions et les fichiers de contrôle **SHA-256**. Les versions beta seront distinguées des versions stables. Aucun exécutable de développement n’est proposé ici.
+Chaque publication précise la version, les nouveautés, les limites connues et les fichiers de contrôle **SHA-256**. Les versions bêta sont distinguées des versions stables. L’exécutable n’est pas encore signé : Windows SmartScreen peut afficher un avertissement ; vérifiez l’empreinte SHA-256 avant de l’exécuter.
 
 ## Pourquoi Maestrr ?
 
