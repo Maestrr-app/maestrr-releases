@@ -1,172 +1,107 @@
-<p align="center">
-  <img src="images/maestrr-presentation.png" alt="Maestrr — votre serveur multimédia personnel : films, séries, animés et musique" width="1280">
-</p>
-
 <h1 align="center">Maestrr — Votre multimédia, chez vous</h1>
+<p align="center">Installez votre serveur. Découvrez vos médias. Pilotez vos applications.</p>
+<p align="center"><strong>Auto-hébergé · Windows · Linux · TrueNAS SCALE 24.10+ · Mobile et tablette</strong></p>
 
-<p align="center">
-  Un assistant d’installation et un dashboard pour retrouver vos médias,<br>
-  centraliser vos demandes et suivre votre serveur depuis votre navigateur.
-</p>
+## Télécharger Maestrr
 
-<p align="center">
-  <strong>Auto-hébergé</strong> · <strong>Windows & Linux</strong> · <strong>Interface web mobile et tablette</strong>
-</p>
-
-<p align="center">
-  <a href="#téléchargements">Téléchargements</a> ·
-  <a href="#comment-ça-fonctionne">Fonctionnement</a> ·
-  <a href="#les-applications-et-leur-rôle">Applications</a> ·
-  <a href="#préparer-son-installation">Installation</a> ·
-  <a href="#questions-fréquentes">Questions fréquentes</a>
-</p>
-
-> **Bêta publique disponible : [Maestrr 1.6.0-beta.8](https://github.com/Maestrr-app/maestrr-releases/releases/tag/v1.6.0-beta.8).** Testez-la d’abord sur une installation non critique. Les visuels de cette page sont indicatifs et l’interface continue d’évoluer.
-
-## Téléchargements
-
-Les versions sont publiées dans les **[Releases](https://github.com/Maestrr-app/maestrr-releases/releases)** de ce dépôt.
-
-| Distribution | Usage | Disponibilité |
-| --- | --- | --- |
-| Setup Windows | Installer sur ce PC, sur un serveur Debian/Ubuntu par SSH ou sur un NAS TrueNAS SCALE | [Bêta 1.6.0-beta.8](https://github.com/Maestrr-app/maestrr-releases/releases/tag/v1.6.0-beta.8) |
-| Mise à jour du dashboard | Installée automatiquement par l’agent Maestrr, en conservant la configuration | [Bêta 1.6.0-beta.8](https://github.com/Maestrr-app/maestrr-releases/releases/tag/v1.6.0-beta.8) |
-| Application Android native | Projet distinct, pour une étape ultérieure | Pas encore disponible |
-
-Chaque publication précise la version, les nouveautés, les limites connues et les fichiers de contrôle **SHA-256**. Les versions bêta sont distinguées des versions stables. L’exécutable n’est pas encore signé : Windows SmartScreen peut afficher un avertissement ; vérifiez l’empreinte SHA-256 avant de l’exécuter.
-
-## Pourquoi Maestrr ?
-
-Un serveur multimédia réunit plusieurs applications, chacune avec son rôle et ses réglages. Maestrr les rassemble dans un parcours commun, de la préparation du serveur à l’ouverture d’un média disponible.
-
-- **Installer avec un guide** : destination, vérification de la machine, stockage, applications, comptes, catalogue et accès aux services.
-- **Découvrir vos médias** : films, séries, animation et albums, avec fiches et informations issues des catalogues intégrés.
-- **Suivre les demandes** : recherche, téléchargement, importation et disponibilité dans la médiathèque.
-- **Retrouver votre collection** : librairie, éléments suivis, filtres et recherche.
-- **Piloter votre instance** : applications, notifications, informations réseau, journaux et gestion des mises à jour.
-- **Utiliser plusieurs écrans** : navigateur sur ordinateur, mobile ou tablette ; ajout à l’écran d’accueil lorsque le navigateur le permet.
-
-Maestrr ne fournit pas de films, d’albums ou d’abonnements : il organise votre installation et les services que vous avez configurés.
-
-## Comment ça fonctionne
-
-![Schéma du parcours Maestrr : préparer le serveur, installer les applications Docker, suivre les demandes puis lire dans Jellyfin](images/parcours-maestrr.png)
-
-### 1. Préparer le serveur
-
-Le setup s’exécute sur Windows. Il permet de choisir une installation sur ce PC ou sur un serveur Linux accessible par SSH, puis de préparer les dossiers et les applications souhaitées.
-
-<p align="center">
-  <img src="images/setup-destination.png" alt="Aperçu de l’étape du setup proposant une installation Windows locale ou Linux par SSH" width="780">
-</p>
-
-<p align="center"><em>Aperçu de l’étape de choix de destination. L’apparence peut évoluer entre les versions.</em></p>
-
-### 2. Choisir les applications
-
-Sélectionnez les composants utiles à votre serveur. Le setup prépare leur déploiement et leurs connexions prises en charge, avec les ports et les accès de votre instance.
-
-### 3. Découvrir et suivre
-
-Depuis le dashboard, recherchez un média, ouvrez sa fiche et envoyez une demande. Maestrr affiche ensuite les informations disponibles auprès des services : recherche en cours, suivi, téléchargement, importation ou disponibilité.
-
-### 4. Lire dans Jellyfin
-
-Lorsqu’un média est importé et reconnu dans Jellyfin, le dashboard propose un accès à sa lecture. Jellyfin reste le serveur de lecture ; Maestrr en facilite l’accès et le suivi.
-
-## Les applications et leur rôle
-
-| Composant | Rôle dans l’installation |
+| Canal | Installateur Windows x64 |
 | --- | --- |
-| **Maestrr Dashboard** | Recherche, demandes, fiches, librairie, suivi et interface du serveur |
-| **Docker / Compose** | Déploiement et fonctionnement des services dans leurs conteneurs |
-| **Jellyfin** | Médiathèque et lecture des médias disponibles |
-| **Radarr** | Gestion et suivi des films |
-| **Sonarr** | Gestion des séries, saisons et épisodes |
-| **Lidarr** | Gestion des artistes et des albums |
-| **Prowlarr** | Centralisation des indexeurs configurés et connexion aux applications compatibles |
-| **qBittorrent** | Gestion des téléchargements pris en charge |
-| **Bazarr** | Gestion des sous-titres des films et séries |
-| **Listenarr** | Composant optionnel pour les livres audio ; configuration propre à cette application |
-| **Dockge** | Interface de gestion des stacks Docker sur Linux |
-| **Tailscale** | Accès distant privé lorsque cette option est configurée |
-| **Gluetun / VPN** | Connexion VPN pour Qbittorent, si vous activez cette option |
+| **Bêta publique · 1.6.0-beta.8** | **[⬇ Télécharger Maestrr Setup (.exe)](https://github.com/Maestrr-app/maestrr-releases/releases/download/v1.6.0-beta.8/Maestrr-Setup-1.6.0-beta.8-win-x64.exe)** |
+| **Stable** | Pas encore publiée — [consulter les versions](https://github.com/Maestrr-app/maestrr-releases/releases) |
 
-Les métadonnées et illustrations utilisent les sources intégrées selon le média, notamment **TMDB**, **MusicBrainz**, **ListenBrainz**, **Apple** et **Fanart.tv**. Leur disponibilité dépend des catalogues et des accès configurés.
+[Notes de version](https://github.com/Maestrr-app/maestrr-releases/releases/tag/v1.6.0-beta.8) · [Empreinte SHA256 du setup](https://github.com/Maestrr-app/maestrr-releases/releases/download/v1.6.0-beta.8/Maestrr-Setup-1.6.0-beta.8-win-x64.exe.sha256) · [Toutes les versions](https://github.com/Maestrr-app/maestrr-releases/releases)
 
-Les applications tierces conservent leurs propres conditions, versions et fonctionnalités. Elles ne sont pas toutes obligatoires.
+Le setup se lance sur **Windows** : il installe sur ce PC ou prépare votre serveur **Linux / TrueNAS par SSH**. Il n'existe pas d'EXE distinct pour Linux ou TrueNAS.
 
-## Préparer son installation
+> **Version bêta :** testez d'abord sur une installation non critique et sauvegardez vos configurations. L'installateur actuel n'est pas signé : Windows peut afficher un avertissement SmartScreen. Téléchargez uniquement depuis les publications officielles et vérifiez l'empreinte.
 
-Avant la première version publique, vous pouvez préparer :
+![Le dashboard Maestrr : demandes, disponibilité, qualité et accès Jellyfin](images/dashboard.png)
 
-1. **La machine** : un PC Windows pour lancer le setup ; pour une installation distante, un serveur Debian/Ubuntu avec un accès SSH.
-2. **Le stockage** : des dossiers dédiés aux configurations et aux médias, avec une capacité suffisante.
-3. **Les accès** : les comptes ou clés nécessaires aux services que vous souhaitez connecter, notamment TMDB et les indexeurs choisis.
-4. **Les options réseau** : accès local, Tailscale si vous souhaitez un accès distant, et configuration VPN si vous l’utilisez.
-5. **Les sauvegardes** : un emplacement et une stratégie adaptés à vos configurations et à votre collection.
+## Votre serveur, une seule interface
 
-Les prérequis matériels, versions de systèmes prises en charge et étapes exactes seront précisés dans chaque publication. Un abonnement VPN n’est pas obligatoire pour utiliser Maestrr.
+Films, séries, animés et albums : recherchez, découvrez, demandez et retrouvez les médias de votre collection. Maestrr rassemble le suivi des services que vous configurez ; Jellyfin assure la lecture.
 
-## Vos données restent sur votre instance
+### Découvrir films, séries, animés et musique
 
-Chaque installation possède ses propres comptes, paramètres, connexions et services. **Aucun compte Maestrr centralisé ni serveur de commande commun n’est nécessaire.**
+Explorez les bannières de découverte et les catalogues par catégorie, studio ou genre. Les fiches regroupent les métadonnées disponibles et les actions de votre installation.
 
-L’auto-hébergement n’exclut pas les connexions aux services externes que vous activez : les recherches de catalogue, images et vérifications de versions contactent leurs fournisseurs respectifs.
+![Découverte des films et navigation dans les affiches](images/decouverte.png)
 
-Pour un accès hors de chez vous, Tailscale et les liens HTTPS peuvent être utilisés après configuration. Le dashboard peut alors être ajouté à l’écran d’accueil d’un appareil compatible ; cela ne remplace pas une application Android native.
+### Demander un média et suivre sa disponibilité
 
-## Mises à jour
+Choisissez la qualité et le dossier de destination. Retrouvez le statut, les fichiers disponibles et le bouton de lecture lorsque le média est reconnu dans Jellyfin.
 
-Le gestionnaire intégré au menu **Système → Mises à jour** est en cours de validation pour les installations Linux compatibles.
+![Fiche de film et disponibilité dans Jellyfin](images/fiche-media.png)
 
-- Les publications Maestrr seront détectées depuis ce dépôt public, après publication d’un paquet officiel compatible.
-- Les applications Docker autorisées peuvent être vérifiées et mises à jour indépendamment.
-- Les modes manuel, détection avec notification et automatique par application sont prévus dans le module.
-- Les mises à jour automatiques demandent une activation explicite ; elles ne sont pas imposées aux services tiers.
-- Les comptes, configurations et volumes existants sont conservés par le mécanisme prévu. Une sauvegarde et une validation de compatibilité restent nécessaires ; un retour d’image n’annule pas une migration de base de données.
+### Choisir les saisons et les épisodes
 
-Un simple push du code privé n’est **pas** une mise à jour distribuée. Il faut un artefact validé et une publication officielle.
+Les séries et séries animées disposent d'une sélection par saison, avec accès aux épisodes.
 
-## Questions fréquentes
+![Sélection des saisons et épisodes d'une série animée](images/saisons-episodes.png)
+
+### Suivre les téléchargements
+
+Consultez la progression, les débits et les contrôles individuels ou groupés depuis le dashboard, selon vos droits.
+
+![Suivi des téléchargements et commandes qBittorrent](images/telechargements.png)
+
+### Piloter les applications
+
+Accédez aux applications et à leurs commandes, aux notifications, aux comptes, aux journaux et aux mises à jour.
+
+![Menu des applications et contrôles des services](images/applications.png)
+
+| Application | Rôle |
+| --- | --- |
+| Jellyfin | Médiathèque et lecture |
+| Radarr / Sonarr / Lidarr | Films, séries et albums |
+| Prowlarr / qBittorrent / Bazarr | Indexeurs, téléchargements et sous-titres |
+| Listenarr | Livres audio, avec configuration propre à l'application |
+| Immich | Gestion de vos photos et vidéos |
+| Nginx Proxy Manager | Gestion de proxy inverse |
+| Tailscale | Accès distant privé |
+| Gluetun | VPN optionnel pour les téléchargements |
+| Dockge | Gestion des stacks sur les parcours compatibles ; TrueNAS utilise ses Apps natives |
+
+Vous choisissez les applications à installer. Les logiciels tiers conservent leurs propres prérequis et conditions.
+
+### Accéder à votre serveur à distance
+
+Connectez vos appareils au même réseau Tailscale et configurez vos liens HTTPS. Le dashboard s'utilise dans un navigateur sur ordinateur, iPad ou téléphone et peut être ajouté à l'écran d'accueil.
+
+![Tailscale : connexion et appareils de démonstration](images/tailscale.png)
+
+### Comparer la connexion avec et sans VPN
+
+Lancez le test de débit intégré pour observer votre connexion. La capture ci-dessous montre l'interface avant mesure, sans résultat de performance annoncé.
+
+![Test de débit sans VPN et avec VPN, avant mesure](images/test-debit.png)
+
+## Installation
+
+1. Téléchargez le **setup Windows** en haut de cette page.
+2. Choisissez Windows local, Linux par SSH ou TrueNAS SCALE 24.10 et versions suivantes compatibles.
+3. Vérifiez les prérequis, les dossiers et les permissions avec le diagnostic du setup.
+4. Sélectionnez vos applications, leurs ports et vos comptes.
+5. Configurez les services souhaités, puis lancez l'installation.
+
+Sur TrueNAS, prévoyez un pool Apps et des datasets de données accessibles aux applications. La compatibilité exacte dépend de la version du NAS ; les versions candidates demandent une validation particulière.
+
+Les guides d'installation et d'utilisation sont accessibles depuis le setup et votre installation. Maestrr ne fournit aucun média, abonnement ou accès aux catalogues privés : vous configurez vos propres services et sources autorisées.
+
+## Mises à jour et données
+
+Les publications officielles sont distribuées dans les [Releases](https://github.com/Maestrr-app/maestrr-releases/releases). Le gestionnaire intégré distingue Maestrr et les applications Docker sur les installations compatibles. Une modification du code privé ne distribue pas automatiquement une mise à jour.
+
+Chaque instance garde ses comptes, configurations et volumes. Les recherches et les images contactent les fournisseurs intégrés, notamment TMDB, MusicBrainz, ListenBrainz, Apple et Fanart.tv. Sauvegardez vos données avant les mises à jour.
 
 <details>
-<summary><strong>Est-ce un service hébergé par Maestrr ?</strong></summary>
+<summary><strong>Paquet dashboard pour les installations existantes</strong></summary>
 
-Non. Vous hébergez votre instance et vos services sur votre propre machine. Ce dépôt distribue les versions officielles lorsqu’elles sont prêtes.
+Le [paquet dashboard 1.6.0-beta.8](https://github.com/Maestrr-app/maestrr-releases/releases/download/v1.6.0-beta.8/maestrr-dashboard-v2.tar.gz) est destiné au mécanisme de mise à jour des installations compatibles. Pour une première installation, utilisez le setup EXE.
 
 </details>
 
-<details>
-<summary><strong>Faut-il déjà connaître toutes les applications ?</strong></summary>
+**Suivre les versions :** Watch → Custom → Releases sur ce dépôt.
 
-Le setup explique les étapes et le rôle des composants. Les applications conservent toutefois leurs propres réglages et prérequis ; certaines options demandent une configuration complémentaire.
-
-</details>
-
-<details>
-<summary><strong>Peut-on utiliser Maestrr sur iPad ou Android ?</strong></summary>
-
-Le dashboard est accessible dans un navigateur compatible et son interface s’adapte aux écrans mobiles et tablettes. Après configuration de l’accès, il peut être ajouté à l’écran d’accueil. L’application Android native est un projet ultérieur.
-
-</details>
-
-<details>
-<summary><strong>Où seront les téléchargements ?</strong></summary>
-
-Dans l’onglet [Releases](https://github.com/Maestrr-app/maestrr-releases/releases) de ce dépôt. Pour le moment, aucune distribution officielle n’y est publiée.
-
-</details>
-
-<details>
-<summary><strong>Pourquoi les dépôts de développement ne sont-ils pas visibles ?</strong></summary>
-
-Cette page est consacrée à la présentation et aux distributions publiques. Les dépôts de développement sont séparés et privés.
-
-</details>
-
----
-
-**Suivre les prochaines versions :** utilisez **Watch → Custom → Releases** sur ce dépôt pour recevoir les annonces GitHub.
-
-*Les noms et logos des applications tierces appartiennent à leurs détenteurs respectifs. Leur présence explique les intégrations et n’implique aucun partenariat. Les logos tiers utilisés dans le schéma proviennent de [Homarr Dashboard Icons](https://github.com/homarr-labs/dashboard-icons). Les visuels de présentation ne représentent pas une version publique déjà distribuée.*
+*Captures fournies pour présenter l'interface ; son apparence et les options peuvent évoluer. Les affiches, noms et logos tiers appartiennent à leurs détenteurs respectifs et n'impliquent aucun partenariat. Les sources de développement restent privées.*
