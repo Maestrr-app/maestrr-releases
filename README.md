@@ -6,10 +6,10 @@
 
 | Canal | Installateur Windows x64 |
 | --- | --- |
-| **Bêta publique · 1.6.0-beta.12** | **[⬇ Télécharger Maestrr Setup (.exe)](https://github.com/Maestrr-app/maestrr-releases/releases/download/v1.6.0-beta.12/Maestrr-Setup-1.6.0-beta.12-win-x64.exe)** |
+| **Bêta publique · 1.6.0-beta.13** | **[⬇ Télécharger Maestrr Setup (.exe)](https://github.com/Maestrr-app/maestrr-releases/releases/download/v1.6.0-beta.13/Maestrr-Setup-1.6.0-beta.13-win-x64.exe)** |
 | **Stable** | Pas encore publiée — [consulter les versions](https://github.com/Maestrr-app/maestrr-releases/releases) |
 
-[Notes de version](https://github.com/Maestrr-app/maestrr-releases/releases/tag/v1.6.0-beta.12) · [Empreinte SHA256 du setup](https://github.com/Maestrr-app/maestrr-releases/releases/download/v1.6.0-beta.12/Maestrr-Setup-1.6.0-beta.12-win-x64.exe.sha256) · [Toutes les versions](https://github.com/Maestrr-app/maestrr-releases/releases)
+[Notes de version](https://github.com/Maestrr-app/maestrr-releases/releases/tag/v1.6.0-beta.13) · [Empreinte SHA256 du setup](https://github.com/Maestrr-app/maestrr-releases/releases/download/v1.6.0-beta.13/Maestrr-Setup-1.6.0-beta.13-win-x64.exe.sha256) · [Toutes les versions](https://github.com/Maestrr-app/maestrr-releases/releases)
 
 Le setup se lance sur **Windows** : il installe sur ce PC ou prépare votre serveur **Linux / TrueNAS par SSH**. Il n'existe pas d'EXE distinct pour Linux ou TrueNAS.
 
@@ -98,7 +98,7 @@ Chaque instance garde ses comptes, configurations et volumes. Les recherches et 
 <details>
 <summary><strong>Paquet dashboard pour les installations existantes</strong></summary>
 
-Le [paquet dashboard 1.6.0-beta.12](https://github.com/Maestrr-app/maestrr-releases/releases/download/v1.6.0-beta.12/maestrr-dashboard-v2.tar.gz) est destiné au mécanisme de mise à jour des installations compatibles. Pour une première installation, utilisez le setup EXE.
+Le [paquet dashboard 1.6.0-beta.13](https://github.com/Maestrr-app/maestrr-releases/releases/download/v1.6.0-beta.13/maestrr-dashboard-v2.tar.gz) est destiné au mécanisme de mise à jour des installations compatibles. Pour une première installation, utilisez le setup EXE.
 
 </details>
 
